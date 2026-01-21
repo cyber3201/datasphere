@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataSphere - L'excellence Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for Runtime/Preview -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1E3A8A', // Deep Blue
+              secondary: '#3B82F6', // Bright Blue
+              cream: '#FDFCF8', // Main Background
+              'cream-dark': '#F2EFE5', // Secondary Background
+              surface: '#FFFFFF',
+              text: '#0F172A',
+              muted: '#64748B',
+              accent: '#10B981', // Emerald for success/accents
+              maroon: '#9F1239', // Rose/Maroon for specific accents
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            borderRadius: {
+              'xl': '0.75rem', 
+              '2xl': '1rem',
+              '3xl': '1.5rem',
+              '4xl': '2rem',
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'soft-hover': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+              'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-up': 'slideUp 0.5s ease-out forwards',
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-cream text-text font-sans;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          @apply font-display;
+        }
+      }
+      /* Custom Scrollbar Utilities */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "@uiw/react-codemirror": "https://esm.sh/@uiw/react-codemirror@^4.25.4",
+    "@codemirror/lang-sql": "https://esm.sh/@codemirror/lang-sql@^6.10.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/src/index.css">
+</head>
+  <body class="antialiased text-text bg-cream selection:bg-primary/20">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
