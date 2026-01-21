@@ -152,5 +152,5 @@ Assurez-vous que tous les fichiers TypeScript sont correctement typés et que `t
 ## 🤝 Support
 
 Pour toute question ou problème :
-- Email: contact@datasphere.ma
+- Email: zakariagbibar4@gmail.com
 - Localisation: Casablanca, Maroc
